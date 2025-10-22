@@ -1,0 +1,47 @@
+# Ignorar archivos de Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.pdb
+*.log
+*.pot
+*.py[cod]
+*.coverage
+*.hypothesis/
+*.tox/
+*.nox/
+*.coverage.*
+*.cache
+*.egg-info/
+dist/
+build/
+.eggs/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+*.db
+
+# Ignorar archivos de React.js (Node.js)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+dist/
+build/
+*.log
+
+# Ignorar configuraciones de editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Ignorar archivos generados por el sistema operativo
+.DS_Store
+Thumbs.db
