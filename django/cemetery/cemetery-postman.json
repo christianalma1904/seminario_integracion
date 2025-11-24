@@ -1,0 +1,112 @@
+{
+  "info": {
+    "name": "Cemetery Management API",
+    "_postman_id": "e88b9c40-0000-0000-0000-cemeteryapi",
+    "description": "Colección para probar la gestión de cementerio en Django",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar sectores",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/cemetery/sectors/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "cemetery", "sectors", ""]
+        }
+      }
+    },
+    {
+      "name": "Crear sector",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Sector A\",\n  \"description\": \"Sector principal\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/cemetery/sectors/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "cemetery", "sectors", ""]
+        }
+      }
+    },
+    {
+      "name": "Listar tumbas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/cemetery/graves/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "cemetery", "graves", ""]
+        }
+      }
+    },
+    {
+      "name": "Crear tumba",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"sector\": 1,\n  \"code\": \"A-01-01\",\n  \"row\": \"A\",\n  \"column\": \"1\",\n  \"status\": \"available\",\n  \"notes\": \"Primer nicho\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/cemetery/graves/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "cemetery", "graves", ""]
+        }
+      }
+    },
+    {
+      "name": "Listar fallecidos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/cemetery/deceased/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "cemetery", "deceased", ""]
+        }
+      }
+    },
+    {
+      "name": "Registrar fallecido",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"grave\": 1,\n  \"first_name\": \"Juan\",\n  \"last_name\": \"Pérez\",\n  \"date_of_birth\": \"1950-01-01\",\n  \"date_of_death\": \"2024-11-01\",\n  \"burial_date\": \"2024-11-03\",\n  \"document_id\": \"1234567890\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/cemetery/deceased/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "cemetery", "deceased", ""]
+        }
+      }
+    }
+  ]
+}
